@@ -250,6 +250,20 @@
   .chat-input button{background:var(--rust); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:600; font-size:13px;}
 
   @media (prefers-reduced-motion: reduce){ .g-item img, .btn{transition:none;} }
+
+  /* ---- Mobile fix: booking section ---- */
+  .book-grid > *, .row2 > *, .card{min-width:0;}
+  .card, .field input, .field select, .field textarea{box-sizing:border-box; max-width:100%;}
+  @media(max-width:860px){
+    .book-grid{grid-template-columns:1fr !important; gap:24px;}
+    .card{padding:20px 16px;}
+  }
+  @media(max-width:560px){
+    .row2{grid-template-columns:1fr !important;}
+    .day-grid{grid-template-columns:repeat(4,minmax(0,1fr)) !important;}
+    .time-grid{grid-template-columns:1fr !important;}
+    .book h2, .book p{overflow-wrap:anywhere;}
+  }
 </style>
 </head>
 <body>
